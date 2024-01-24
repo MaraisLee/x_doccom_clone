@@ -1,9 +1,5 @@
-import React from 'react'
+import SignupModal from "@/app/(beforeLogin)/_component/SignupModal";
 
-const pages = () => {
-  return (
-	<div>pages</div>
-  )
+export default function Page() {
+	return <SignupModal />;
 }
-
-export default pages
