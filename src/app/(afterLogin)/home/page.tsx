@@ -1,9 +1,27 @@
-import React from 'react'
+import React from "react";
+import style from "./home.module.css"
+import Tab from "./_component/Tab";
+import PostForm from "./_component/PostForm";
+import Post from "../_component/Post";
 
-const HomePage = () => {
-  return (
-	<div>pages</div>
-  )
+export default function Home() {
+	return (
+		<main className={style.main}>
+			<Tab />
+			<PostForm />
+			{/* <Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post />
+			<Post /> */}
+		</main>
+	);
 }
-
-export default HomePage
