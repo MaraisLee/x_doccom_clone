@@ -9,7 +9,6 @@ export default function Home() {
 		<main className={style.main}>
 			<Tab />
 			<PostForm />
-			{/* <Post />
 			<Post />
 			<Post />
 			<Post />
@@ -21,7 +20,8 @@ export default function Home() {
 			<Post />
 			<Post />
 			<Post />
-			<Post /> */}
+			<Post />
+			<Post />
 		</main>
 	);
 }
