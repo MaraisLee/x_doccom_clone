@@ -5,8 +5,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import "dayjs/locale/ko";
 import ActionButtons from "@/app/(afterLogin)/_component/ActionButtons";
 import PostArticle from "@/app/(afterLogin)/_component/PostArticle";
-// import { faker } from "@faker-js/faker";
-// import PostImages from "@/app/(afterLogin)/_component/PostImages";
+import { faker } from "@faker-js/faker";
+import PostImages from "@/app/(afterLogin)/_component/PostImages";
 
 dayjs.locale("ko");
 dayjs.extend(relativeTime);
@@ -22,18 +22,17 @@ export default function Post({ noImage }: Props) {
 			nickname: "Elon Musk",
 			image: "/yRsRRjGO.jpg",
 		},
-		content: "클론코딩 라이브로 하니 너무 힘들어요 ㅠㅠ",
+		content: "할수있다 이예은!!",
 		createdAt: new Date(),
 		Images: [] as any[],
 	};
-	// if (Math.random() > 0.5 && !noImage) {
-	// 	target.Images.push(
-	// 		{ imageId: 1, link: faker.image.urlLoremFlickr() },
-	// 		{ imageId: 2, link: faker.image.urlLoremFlickr() },
-	// 		{ imageId: 3, link: faker.image.urlLoremFlickr() },
-	// 		{ imageId: 4, link: faker.image.urlLoremFlickr() },
-	// 	);
-	// }
+	if (Math.random() > 0.5 && !noImage) {
+		target.Images.push(
+			{ imageId: 1, link: faker.image.urlLoremFlickr() },
+			{ imageId: 2, link: faker.image.urlLoremFlickr() },
+			{ imageId: 3, link: faker.image.urlLoremFlickr() },
+		);
+	}
 
 	return (
 		<PostArticle post={target}>
@@ -67,7 +66,7 @@ export default function Post({ noImage }: Props) {
 					</div>
 					<div>{target.content}</div>
 					<div>
-						{/* <PostImages post={target} /> */}
+						<PostImages post={target} />
 					</div>
 					<ActionButtons />
 				</div>
